@@ -1,1 +1,1 @@
-This is the public folder which should contain the index.html and script.js files
+This is the public folder which should contain the index.html and script.js files as well as the css folder which contains the styles.css file
