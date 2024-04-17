@@ -1,0 +1,1 @@
+This is the scripts folder which should contain the model card toolkit python notebook
