@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Model Information</title>
+    <link rel="stylesheet" href="css/styles.css"> <!-- Make sure the path is correct -->
+</head>
+<body>
+    <h1>Welcome to Realm, please submit your model information</h1>
+    <form id="modelForm">
+        <div>
+            <label for="accuracy">Accuracy:</label>
+            <input type="number" id="accuracy" name="accuracy" required>
+        </div>
+        <div>
+            <label for="recall">Recall:</label>
+            <input type="number" id="recall" name="recall" required>
+        </div>
+        <div>
+            <label for="f1Score">F1 Score:</label>
+            <input type="number" id="f1Score" name="f1Score" required>
+        </div>
+        <div>
+            <label for="metadata">Metadata:</label>
+            <input type="text" id="metadata" name="metadata" required>
+        </div>
+        <div>
+            <label for="description">Description:</label>
+            <input type="text" id="description" name="description" required>
+        </div>
+        <!-- This is the correct place for the Submit button -->
+        <form id="modelForm">
+    <!-- Your form inputs here -->
+    <button type="submit" id="submitButton">Submit</button>
+</form>
+
+    <form id="uploadForm" enctype="multipart/form-data">
+        <div>
+            <label for="modelFile">Upload Model:</label>
+            <input type="file" id="modelFile" name="modelFile" required>
+        </div>
+        <button type="submit">Upload Model</button>
+    </form>
+
+<form id="revalidateForm">
+        <input type="text" id="tokenId" placeholder="Enter Token ID for Revalidation" required>
+        <input type="number" id="newAccuracy" placeholder="New Accuracy" required>
+        <input type="number" id="newRecall" placeholder="New Recall" required>
+        <input type="number" id="newF1Score" placeholder="New F1 Score" required>
+        <button type="submit">Revalidate Model</button>
+    </form>
+
+    <form id="resultForm">
+        <input type="text" id="resultTokenId" placeholder="Enter Token ID for Results" required>
+        <button type="submit">Get Model Results</button>
+    </form>
+
+<!-- Loading Indicator (hidden by default) -->
+<div id="loading">Processing request...<span class="loading-dot"></span><span class="loading-dot"></span><span class="loading-dot"></span></div>    
+<div id="result"></div>
+
+<!-- Toast Notification -->
+<div id="toast" class="toast">This is a message</div>
+
+
+    <div id="resultDisplay"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
